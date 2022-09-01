@@ -24,7 +24,7 @@ def benchmark(num_times):
 
     start = time.clock_gettime(time.CLOCK_REALTIME)
     # Detect faces
-    for i in range(0,num_times): 
+    for _ in range(num_times):
         faces = face_cascade.detectMultiScale(gray, 1.1, 4)
 
     face_detect_time = time.clock_gettime(time.CLOCK_REALTIME) - start
